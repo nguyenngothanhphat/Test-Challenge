@@ -1,0 +1,44 @@
+header
+  background: #e2ede8
+  position: absolute
+  top: 44px
+  left: 0
+  width: 100%
+  z-index: 100
+.header-wrapper
+  display: flex
+  position: relative
+.header-link
+  img
+    position: absolute
+    top: -44px
+    left: 0
+    z-index: 10
+.menu-list
+  display: flex
+  li
+    transition: hover .3s ease
+    &:hover
+      background: #c7d9d5
+  .menu-link
+    color: #494f4e
+    text-transform: uppercase
+@include desktop
+  .header-wrapper
+    gap: 0 647px
+  .header-button
+    display: none
+  .menu-list
+    gap: 0 51px
+    li
+      padding: 10px 30px 11px 18px
+    .menu-link
+      font-size: 21px
+@include mobile
+  .header-button
+    display: block
+    margin-left: auto
+    padding: 10px 0 11px
+  .menu-list
+    li
+      display: none

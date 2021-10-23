@@ -1,0 +1,46 @@
+@mixin flex-variant($display, $direction: false, $align: false, $justify: false, $wrap: false)
+  display: $display
+
+  @if $direction 
+    flex-direction: $direction
+
+  @if $align
+    align-items: $align
+
+  @if $justify 
+    justify-content: $justify
+
+  @if $wrap 
+    flex-wrap: $wrap
+
+@mixin font-variant($size: false, $weight: false, $color: false, $font-family: false, $text-transform: false, $line-height: false)
+  @if $size 
+    font-size: $size
+  @if $weight 
+    font-weight: $weight
+  @if $color 
+    color: $color
+  @if $font-family 
+    font-family: $font-family
+  @if $text-transform 
+    text-transform: $text-transform
+  @if $line-height
+    line-height: $line-height
+
+@mixin flex($direction: false, $align: false, $justify: false, $wrap: false) 
+  @include flex-variant(flex, $direction: $direction, $align: $align, $justify: $justify, $wrap: $wrap)
+
+@mixin inline-flex($direction: false, $align: false, $justify: false, $wrap: false) 
+  @include flex-variant(inline-flex, $direction: $direction, $align: $align, $justify: $justify, $wrap: $wrap)
+
+@mixin font($size: false, $weight: false, $color: false, $font-family: false, $text-transform: false, $line-height: false)
+  @include font-variant($size: $size, $weight: $weight, $color: $color, $font-family: $font-family, $text-transform: $text-transform, $line-height: $line-height)
+
+@mixin mobile
+  @media screen and (max-width: $mobile-max)
+    @content
+@mixin desktop
+  @media screen and (min-width: $desktop-lg-min)
+    @content
+    
+  

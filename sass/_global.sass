@@ -1,0 +1,55 @@
+.container
+  overflow: hidden
+  position: relative
+.button-primary
+  text-transform: uppercase
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+.title-primary
+  text-transform: uppercase
+.description-primary
+  font-family: $font-family-montserrat
+  line-height: 1.2
+.trans
+  opacity: 1
+  transition: opacity 0.3s ease
+  &:hover
+    opacity: 0.8
+@include desktop 
+  body
+    font-size: 14px
+  .container 
+    min-width: 1438px
+  .wrapper 
+    width: 1380px
+    margin: 0 auto
+  .button-primary
+    font-size: 25px
+    border-radius: 4px
+    width: 322px
+    min-height: 65px
+  .title-primary
+    font-size: 75px
+  .description-primary
+    font-size: 30px
+@include mobile
+  html 
+    font-size: calc(100vw / 7.5)
+  body
+    font-size: .28rem
+  .container
+    min-width: 320px
+  .wrapper
+    padding-left: .3rem
+    padding-right: .3rem
+  .button-primary
+    font-size: .25rem
+    border-radius: .04rem
+    width: 3.22rem
+    min-height: .65rem
+  .title-primary
+    font-size: .75rem
+  .description-primary
+    font-size: .3rem

@@ -1,0 +1,531 @@
+/** Banner **/
+.section-banner
+  background: #f4f9f4
+  position: relative
+  &::after
+    content: ' '
+    position: absolute  
+    right: 0
+    z-index: 12
+    background: url(../img/pattern_banner.png) no-repeat
+    mix-blend-mode: multiply
+.banner-wrapper 
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  figure
+    position: relative
+    img
+      border-radius: 50%
+      border: 5px solid #bed2ce
+      position: relative
+      z-index: 10
+    &::before
+      content: ' '
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: url(../img/pattern_circle_banner.png) no-repeat
+.banner-content
+  text-align: center
+  .banner-title
+    color: #6c9894
+    text-transform: uppercase
+  .banner-description
+    font-family: $font-family-montserrat
+    color: #6c9894
+.banner-button
+  font-family: $font-family-lato
+  background: #6c9894
+  color: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0 auto
+  text-transform: uppercase
+@include desktop
+  .section-banner
+    padding: 254px 0 347px
+    &::after
+      bottom: -398px
+      width: 372px
+      height: 748px
+  .banner-wrapper
+    justify-content: space-between
+    padding-left: 195px
+    padding-right: 36px
+    figure
+      &::before
+        width: 653px
+        height: 653px
+      img
+        width: 373px
+        height: 373px
+  .banner-content
+    padding: 0 25px
+    width: 610px
+    .banner-title
+      font-size: 99px
+    .banner-description
+      font-size: 21px
+      margin-bottom: 24px
+  .banner-button
+    font-size: 17px
+    width: 172px
+    min-height: 29px
+    border-radius: 10px
+    letter-spacing: 0.24px
+@include mobile
+  .section-banner
+    padding: 3.9rem 0 3.47rem
+    &::after
+      bottom: -3.98rem
+      width: 3.72rem
+      height: 7.48rem
+      background-position: center center
+      background-size: cover
+  .banner-wrapper
+    justify-content: center
+    figure
+      margin-bottom: 1.5rem
+      &::before
+        width: 6.53rem
+        height: 6.53rem
+        background-position: center center
+        background-size: cover
+      img
+        width: 3.73rem
+        height: 3.73rem
+  .banner-content
+    padding: 0 .25rem
+    width: 6.1rem
+    .banner-title
+      font-size: .99rem
+    .banner-description
+      font-size: .21rem
+      margin-bottom: .24rem
+  .banner-button
+    font-size: .17rem
+    width: 1.72rem
+    min-height: .29rem
+    border-radius: .1rem
+    letter-spacing: .0024rem
+/** Class **/
+.section-class
+  background: #6c9894
+  text-align: center
+  position: relative
+  z-index: 10
+  .class-title
+    color: #fff
+  .class-description
+    color: #f4f9f4
+.class-list
+  display: flex
+  flex-wrap: wrap
+  li
+    figure
+      position: relative
+      &::after
+        content: ' '
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-48%, -50%)
+        background: url(../img/pattern_circle_class.png) no-repeat
+      img
+        border-radius: 50%
+        position: relative
+        z-index: 10
+    .item-title
+      color: #fff
+      text-transform: uppercase
+    .item-description
+      font-family: $font-family-montserrat
+      color: #f4f9f4
+@include desktop
+  .section-class
+    padding: 121px 0 137px
+    .class-title
+      margin-bottom: 37px
+    .class-description
+      margin-bottom: 40px
+  .class-list
+    justify-content: flex-start
+    gap: 60px 40px
+    width: 1380px
+    padding-left: 50px
+    padding-right: 71px
+    li
+      width: 387px
+      padding: 0 26px
+      figure
+        margin-bottom: 33px
+        &::after
+          width: 385px
+          height: 381px
+        img
+          width: 314px
+          height: 313px
+      .item-title
+        font-size: 37px
+        margin-bottom: 29px
+      .item-description
+        font-size: 22px
+@include mobile
+  .section-class
+    padding: 1.21rem 0 1.37rem
+    .class-title
+      margin-bottom: .37rem
+    .class-description
+      margin-bottom: .6rem
+  .class-list
+    justify-content: center
+    gap: .6rem .4rem
+    li
+      width: 3.87rem
+      padding: 0 .26rem
+      figure
+        margin-bottom: .33rem
+        &::after
+          width: 3.85rem
+          height: 3.81rem
+          background-position: center center
+          background-size: cover
+        img
+          width: 3.14rem
+          height: 3.13rem  
+      .item-title
+        font-size: .37rem
+        margin-bottom: .25rem
+      .item-description
+        font-size: .22rem
+/** Our Stats **/
+.section-our-stats
+  background: url(../img/our_stats_background.jpg) center/cover no-repeat
+  text-align: center
+  position: relative
+  &::before
+    content: ' '
+    position: absolute
+    left: 0
+    background: url(../img/fish_stats.png) no-repeat
+  .stats-title, .stats-description
+    color: #6c9894
+.stats-list
+  display: flex
+  flex-wrap: wrap
+  
+  li
+    border-radius: 50%
+    border: 5px solid #6c9894
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .item-title
+      color: #6c9894
+    .item-description
+      font-family: $font-family-montserrat
+      color: #6c9894
+@include desktop
+  .section-our-stats
+    padding: 94px 0 205px
+    &::before
+      top: -77px
+      width: 609px
+      height: 703px
+    .stats-title
+      margin-bottom: 35px
+    .stats-description
+      margin-bottom: 126px
+  .stats-list
+    justify-content: flex-start
+    gap: 40px 115px
+    width: 1380px
+    padding-left: 100px
+    padding-right: 59px
+    li
+      width: 330px  
+      height: 330px
+      gap: 10px 0
+      padding: 0 60px
+      .item-title
+        font-size: 67px
+      .item-description
+        font-size: 25px
+@include mobile
+  .section-our-stats
+    padding: .94rem 0 2.08rem
+    &::before
+      top: -0.77rem
+      width: 6.09rem
+      height: 7.03rem
+      background-position: center center
+      background-size: cover
+    .stats-title
+      margin-bottom: .4rem
+    .stats-description
+      margin-bottom: 1.37rem
+  .stats-list
+    justify-content: center
+    gap: .4rem 1.15rem
+    li
+      width: 3.3rem  
+      height: 3.3rem
+      gap: .1rem 0
+      padding: 0 .6rem
+      .item-title
+        font-size: .67rem
+      .item-description
+        font-size: .25rem
+/** Best Instructor **/
+.section-instructor
+  background: #6c9894
+  position: relative
+  z-index: 10
+.instructor-wrapper
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+.instructor-content
+  .instructor-title
+    color: #f4f9f4
+    line-height: 1.2
+  .instructor-description
+    color: #f4f9f4
+  .instructor-button
+    background: #f4f9f4
+    color: #6c9894
+@include desktop
+  .instructor-wrapper
+    padding-left: 31px
+    img
+      width: 702px
+      height: 974px
+  .instructor-content
+    width: 705px
+    padding: 244px 63px 20px 58px
+    .instructor-title
+      margin-bottom: 3px
+    .instructor-description
+      margin-bottom: 48px
+@include mobile
+  .instructor-wrapper
+    img
+      width: 6.02rem
+      height: auto
+  .instructor-content
+    width: 6.02rem
+    padding: 1.5rem .63rem .6rem 0
+    .instructor-title
+      margin-bottom: .15rem
+    .instructor-description
+      margin-bottom: .42rem
+/** Experience **/
+.section-experience
+  background: #f4f9f4
+  position: relative
+  &::after
+    content: ' '
+    position: absolute
+    right: 0
+    background: url(../img/pattern_experience.png) no-repeat
+.experience-wrapper
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  z-index: 10
+.experience-content
+  .experience-title
+    color: #6c9894
+    line-height: 1.2
+  .experience-description
+    color: #6c9894
+  .experience-button
+    background: #6c9894
+    color: #f4f9f4
+@include desktop
+  .section-experience
+    padding: 108px 0 72px
+    &::after
+      bottom: -66px
+      width: 500px
+      height: 1155px
+  .experience-wrapper
+    gap: 0 163px
+    padding-left: 50px
+    img
+      width: 578px
+      height: 791px
+  .experience-content
+    padding-top: 159px
+    padding-right: 8px
+    width: 589px
+    .experience-title
+      margin-bottom: 26px
+    .experience-description
+      margin-bottom: 53px
+@include mobile
+  .section-experience
+    padding: 1.08rem 0 .73rem
+    &::after
+      bottom: -0.7rem
+      width: 5rem
+      height: 11.55rem
+      background-position: center center
+      background-size: cover
+  .experience-wrapper
+    justify-content: center
+    img
+      width: 5.78rem
+      height: auto
+  .experience-content
+    padding: .5rem
+    .experience-title
+      margin-bottom: .4rem
+    .experience-description
+      margin-bottom: .56rem
+/** Pricing **/
+.section-pricing
+  background: #6c9894
+  text-align: center
+  .pricing-title
+    color: #f4f9f4
+    text-transform: unset
+  .pricing-description
+    color: #f4f9f4
+.pricing-list
+  display: flex
+  flex-wrap: wrap
+  li
+    background: #f4f9f4
+    .item-title, .item-price
+      color: #6c9894
+    .item-description
+      font-family: $font-family-montserrat
+      color: #6c9894
+    .item-button
+      background: #6c9894
+      color: #f4f9f4
+      margin: 0 auto
+@include desktop
+  .section-pricing
+    padding: 105px 0 98px
+    .pricing-title, .pricing-description
+      margin-bottom: 39px
+  .pricing-list
+    justify-content: flex-start
+    gap: 40px 70px
+    width: 1380px
+    padding-left: 67px
+    padding-right: 41px
+    li
+      width: 372px
+      border-radius: 8px
+      padding: 34px 26px 27px
+      img
+        width: 110px
+        height: 129px
+        margin-bottom: 40px
+      .item-title, .item-price
+        font-size: 37px
+      .item-price
+        margin-bottom: 20px
+      .item-description
+        font-size: 22px
+        margin-bottom: 31px
+@include mobile
+  .section-pricing
+    padding: 1.05rem 0 .98rem
+    .pricing-title, .pricing-description
+      margin-bottom: .39rem
+  .pricing-list
+    justify-content: center
+    gap: .4rem .7rem
+    li
+      width: 3.72rem
+      border-radius: .08rem
+      padding: .34rem .26rem .27rem
+      img
+        width: 1.1rem
+        height: 1.29rem
+        margin-bottom: .4rem
+      .item-title, .item-price
+        font-size: .37rem
+      .item-price
+        margin-bottom: .2rem
+      .item-description
+        font-size: .22rem
+        margin-bottom: .31rem
+/** Photo **/
+.top-photo
+  background: url(../img/photo_background.jpg) center/cover no-repeat
+  text-align: center
+  figure
+    position: relative
+    &::before
+      content: ' '
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -51%)
+      background: url(../img/pattern_circle_photo.png) no-repeat
+    img
+      border-radius: 50%
+      border: 5px solid #6c9894
+      position: relative
+      z-index: 10      
+  .photo-description
+    font-family: $font-family-montserrat
+    color: #6c9894
+  .photo-author
+    color: #6c9894
+    text-transform: uppercase
+@include desktop
+  .top-photo
+    padding: 117px 0 180px
+    figure
+      margin-bottom: 50px
+      &::before
+        width: 408px
+        height: 408px
+      img
+        width: 322px
+        height: 334px   
+    .photo-description
+      font-size: 58px
+      padding: 0 120px
+      margin-bottom: 36px
+    .photo-author
+      font-size: 58px
+@include mobile
+  .top-photo
+    padding: 1.17rem 0 1.8rem
+    figure
+      margin-bottom: .5rem
+      &::before
+        width: 4.08rem
+        height: 4.08rem
+        background-position: center center
+        background-size: cover
+      img
+        width: 3.22rem
+        height: 3.34rem
+    .photo-description
+      font-size: .58rem
+      padding: 0 .2rem
+      margin-bottom: .36rem
+    .photo-author
+      font-size: .58rem
+/** Subcribe **/
+.section-subscribe
+  background: #6c9894
+  padding: 124px 0 217px
+  text-align: center
+  .subscribe-title
+    color: #f4f9f4
+    margin-bottom: 36px
+  .subscribe-description
+    color: #f4f9f4

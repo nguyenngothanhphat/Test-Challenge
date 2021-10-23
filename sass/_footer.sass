@@ -1,0 +1,72 @@
+footer
+  background: #f4f9f4
+.footer-wrapper
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.footer-info
+  .info-title
+    color: #6c9894
+  .info-description
+    font-family: $font-family-montserrat
+    color: #6c9894
+.footer-list
+  display: flex
+  li
+    .item-title
+      color: #6c9894
+    .item-wrapper
+      li
+        .item-link
+          color: #6c9894
+@include desktop
+  footer
+    padding: 140px 0 118px
+  .footer-info
+    width: 530px
+    padding-left: 25px
+    padding-right: 15px
+    .info-title
+      font-size: 33px
+      margin-bottom: 20px
+    .info-description
+      font-size: 25px
+  .footer-list
+    gap: 0 39px
+    li
+      width: 231px
+      padding-right: 20px
+      .item-title
+        font-size: 33px
+        margin-bottom: 26px
+      .item-wrapper
+        li
+          margin-bottom: 12px
+          .item-link
+            font-size: 25px
+@include mobile
+  footer
+    padding: 1.4rem 0 1.18rem
+  .footer-wrapper
+    gap: .5rem 0
+  .footer-info
+    padding-right: .15rem
+    .info-title
+      font-size: .33rem
+      margin-bottom: .2rem
+    .info-description
+      font-size: .25rem
+  .footer-list
+    gap: 0 .39rem
+    li
+      width: 2.31rem
+      padding-right: .2rem
+      .item-title
+        font-size: .33rem
+        margin-bottom: .26rem
+      .item-wrapper
+        li
+          margin-bottom: .12rem
+          .item-link
+            font-size: .25rem
+
